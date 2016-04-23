@@ -1,0 +1,487 @@
+@import "bootstrap/bootstrap.less";
+@import "variables.less";
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-13, .col-lg-14, .col-lg-15, .col-lg-16, .col-lg-17, .col-lg-18, .col-lg-19, .col-lg-2, .col-lg-20, .col-lg-21, .col-lg-22, .col-lg-23, .col-lg-24, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-13, .col-md-14, .col-md-15, .col-md-16, .col-md-17, .col-md-18, .col-md-19, .col-md-2, .col-md-20, .col-md-21, .col-md-22, .col-md-23, .col-md-24, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-13, .col-sm-14, .col-sm-15, .col-sm-16, .col-sm-17, .col-sm-18, .col-sm-19, .col-sm-2, .col-sm-20, .col-sm-21, .col-sm-22, .col-sm-23, .col-sm-24, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-13, .col-xs-14, .col-xs-15, .col-xs-16, .col-xs-17, .col-xs-18, .col-xs-19, .col-xs-2, .col-xs-20, .col-xs-21, .col-xs-22, .col-xs-23, .col-xs-24, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
+	padding:0;
+}
+
+.clearfix:after {
+   content: " "; /* Older browser do not support empty content */
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
+
+body {
+	font-family: @brand-font;
+	background-color: #e1e1e1;
+	margin: 0px;
+	padding: 0px;
+
+	.wrapper {
+		padding: 0;
+	}
+
+	header {
+		padding: 0px;
+		background-color: #00549a;
+		height: 75px;
+
+		div.container {
+			padding: 0px;
+			display: flex;
+		}
+
+		div.logo {
+			text-align: left;
+			padding: 16px 0px 21px 0px;
+		}
+
+		div.text {
+			float: none;
+			padding: 20px 0px;
+			text-align: center;
+			font-family: BellSlim Medium;
+			color: #ffffff;
+			font-size: 24px;
+			letter-spacing: -0.6px;
+		}
+
+		div.button{
+			text-align: right;
+			padding: 20px 0px;
+
+			button {
+				border: 2px solid #ffffff;
+				width: 164px;
+				height: 35px;
+		   		border-radius: 24px;
+		        background-color: transparent;
+		        font-family: Arial;
+				color: #ffffff;
+				font-size: 15px;
+				font-weight: 400;
+			}
+		}
+
+
+	}
+}
+
+div.heading {
+    background: url("../images/heading_bg.png");
+    background-repeat: repeat-x;
+    height: 223px;
+    ul {
+        margin: 0 5%;
+        li {
+            float: left;
+            width: 20%;
+            text-align: center;
+            margin-top: 82px;
+            position: relative;
+            z-index: 1;
+           
+            &:after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                background-color: #c2cedf;
+                top: 13px;
+                z-index: -1;
+            }
+            &:last-child {
+                &:after {
+                    width: 0%;
+                }
+            }
+            
+            p {
+                margin-top: 22px;
+                color: #c2cedf;
+                font-family: Arial;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 36px;
+            }
+            .icon-point-big,
+            .icon-point-check,
+            .icon-point-small {
+                display: inline-block;
+                background: url('../images/icons.png') no-repeat;
+                overflow: hidden;
+                text-indent: -9999px;
+                text-align: left;
+            }
+            .icon-point-big {
+                background-position: -3px -0px;
+                width: 29px;
+                height: 29px;
+                +p {
+                    font-weight: 700;
+                    color: #fff;
+                }
+            }
+            .icon-point-check {
+                background-position: -3px -32px;
+                width: 29px;
+                height: 29px;
+                +p {
+                    color: #fff;
+                }
+            }
+            .icon-point-small {
+                background-position: -3px -64px;
+                width: 13px;
+                height: 13px;
+                margin: 8px 0;
+            }
+        }
+
+        .checked {
+            	&:after {
+                height: 4px;
+                background-color: #fff;
+                top: 12px;
+                }
+            }
+    }
+}
+
+div.search {
+	border-width: 1px;
+	border-color:  #d4d4d4;
+	border-style: solid;
+	background-color:  #f2f2f2;
+	height: 112px;
+	margin-top: 20px;
+	padding: 36px 0 36px 44px;
+}
+
+div.container.context {
+	border-width: 0 1px 1px 1px;
+	border-color:  #d4d4d4;
+	border-style: solid;
+	padding: 0;
+	clear: both;
+	background-color:  #003778;
+}
+
+#searchInput {
+	border-style: solid;
+	border-width: 1px;
+	border-color: #cccccc;
+	box-sizing: border-box;
+	background-color: #ffffff;
+	width: 482px;
+	height: 40px;
+	border-radius: 24px 0 0 24px;
+}
+
+.btn-primary {
+	background-color:  #003778;
+	width: 60px;
+	height: 40px;
+	border-radius: 0 24px 24px 0;
+	padding: 11px 23px 12px 20px;
+}
+
+.row {
+	margin: 0;
+}
+
+.list-group-item {
+	width: 300px;
+	height: 75px;
+	background-color:  #003778;
+	padding: 23px 27px 23px 40px;
+	font-size: 24px;
+	text-align: left;
+	letter-spacing: -1.1pt;
+	border-color: rgba(17,17,17,.2);
+	
+	a{
+		color: #ffffff;
+		text-decoration: none;
+	}
+
+	span {
+		float: right;
+		color: #ffffff;
+		font-size: 20px;
+		padding: 3px;
+	}
+}
+
+.list-group-item:last-child{
+	border-radius: 0;
+}
+
+
+.list-group-item:first-child{
+	border-radius: 0;
+}
+
+li.data{
+	border-width: 0 0 1px 1px;
+	border-color:  #d4d4d4;
+	border-style: solid;
+	background-color:  #ffffff;
+	padding: 0;
+	height: 182px;
+
+	div.context {
+		padding: 39px 43px;
+
+		p.title {
+			padding-bottom: 28px;
+			font-size: 24px;
+			font-weight: bold;
+			line-height: 26px
+		}
+
+		ul {
+			padding-left: 20px;
+			
+			li {
+				font-family: Arial;
+				color:#555555;
+				font-size: 14px;;;
+				letter-spacing: 0.14px;
+				line-height: 18px;
+				text-align: left;
+				list-style-type: disc;
+			}
+		}
+	}
+}
+
+li {
+	list-style-type: none;
+}
+
+.col-md-8.price {
+    padding: 39px 32px;
+    text-align: right;
+
+    p.price {
+		font-family: Arial;
+		color: #00549a;
+		font-size: 47.98px;
+		font-weight: 400;
+		letter-spacing: -0.48px;
+		line-height: 14px;
+		text-align: right;
+		transform: scaleY(1.0004);
+
+		span {
+			vertical-align: super;
+	    	font-family: Arial;
+			color: #00549a;
+			font-size: 20px;
+			font-weight: 400;
+			letter-spacing: -0.32px;
+			line-height: 14px;
+			text-align: right;
+		}
+    }
+
+    button {
+    	border-radius: 17px;
+    	border: 0px solid #003778;
+		background-color: #003778;
+		width: 142px;
+		height: 35px;
+		font-family: Arial;
+		color: #ffffff;
+		font-size: 15px;
+		font-weight: 400;
+		letter-spacing: 0.371px;
+		text-align: center;
+		margin-top: 47px;
+    }
+
+    button:hover {
+    	border: 0px solid #337ab7;
+		background-color: #337ab7;
+    }
+}
+
+.list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover {
+	z-index: 0;
+}
+
+footer {
+	height: 85px;
+	position: relative;
+	padding:0;
+
+	img {
+		margin: -5px 50% -10px 50%;
+		position: relative;
+		cursor: pointer;
+	}
+
+	.footer {
+		padding:0;
+		background-color:  #282f36;
+		height: 85px;
+		position:rel;
+		margin-top:0px;
+		opacity: 1;
+
+		.container {
+			padding: 0;
+
+			.charger {
+				float: left;
+				padding: 16px 0;
+				color: #ffffff;
+				display: flex;
+				font-family: Arial;
+				color: #ffffff;
+				font-size: 16px;
+
+					.addInf {
+						font-family: Arial;
+						color: #999999;
+						font-size: 14px;
+					}
+					
+					.pay {
+						font-family: Arial;
+						color: #ffffff;
+						font-size: 40px;
+						margin: -7px 31px 0 -6px;
+
+						span {
+							vertical-align: super;
+							font-size: 18px;
+							color: #999999;
+						}
+
+					}
+
+					.time {
+						border-width: 0 0 0 1px;
+						border-style: solid ;
+						padding: 0 0 0 40px;
+						border-color: #999999;
+					}
+			}
+
+			.foo_btn {
+				float: right;
+				padding: 20px 0;
+
+				.continue {
+					border: 0px solid #00549a;
+					border-radius: 20px;
+					background-color:  #00549a;
+					width: 159px;
+					height: 45px;
+					font-family: Arial;
+					color: #ffffff;
+					font-size: 18px;
+					font-weight: 400;
+					letter-spacing: 0.449px;
+					text-align: center;
+					transform: scaleY(1.0012);
+				}
+
+				.back {
+					border: 0px solid #00549a;
+					border-radius: 20px;
+					background-color: #ffffff;
+					width: 120px;
+					height: 45px;
+					font-family: Arial;
+					color: #003778;
+					font-size: 17.97px;
+					font-weight: 400;
+					letter-spacing: 0.449px;
+					text-align: center;
+					transform: scaleY(1.0012);
+					margin-right: 21px;
+				}
+			}
+		}
+	}
+}
+
+input[type="checkbox"] {
+    display:none;
+}
+input[type="checkbox"] + label span {
+    display:inline-block;
+    width:17px;
+    height:17px;
+    vertical-align:middle;
+    background:url(../images/checkbox_bg.png) left top no-repeat;
+    cursor:pointer;
+}
+input[type="checkbox"]:checked + label span {
+    background:url(../images/checkbox_check.png) top no-repeat;
+}
+
+div.checkbox {
+
+	margin-left: 20px;
+
+	input {
+		margin: 1px 1px 1px 1px;
+	}
+
+	label {
+		font-family: Arial;
+		color:  #555555;
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 18px;
+		text-align: left;
+		letter-spacing: -1px;
+
+		span {
+			margin: 0 9px 3px 0;
+		}
+	}
+
+	img {
+		margin: 0 30px -3px 9px;
+	}
+}
+
+
+div.checkbox label img {
+	margin: 10px;
+}
+
+
+
+div.heading .line point_big {
+	position: absolute;
+	margin: -35px 0 0 0;
+}
